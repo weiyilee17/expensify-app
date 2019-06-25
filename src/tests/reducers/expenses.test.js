@@ -40,11 +40,11 @@ test('should add an expense', () => {
   };
   const action = {
     type: 'ADD_EXPENSE',
-    expenses: newExpense
+    expense: newExpense
   };
   const state = expensesReducer(testExpenses, action);
 
-  expect(state).toEqual([...testExpenses, action.expenses]);
+  expect(state).toEqual([...testExpenses, action.expense]);
 });
 
 test('should edit an expense if id found', () => {

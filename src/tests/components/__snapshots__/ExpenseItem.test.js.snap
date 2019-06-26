@@ -6,7 +6,6 @@ exports[`should render first fixture expense 1`] = `
     to="/edit/1"
   >
     <h3>
-      Description: 
       Gum
     </h3>
   </Link>

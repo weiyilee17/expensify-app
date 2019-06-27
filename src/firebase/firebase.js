@@ -1,4 +1,5 @@
 import * as firebase from 'firebase/app';
+import { auth } from 'firebase';
 import 'firebase/database';
 
 const firebaseConfig = {
@@ -14,5 +15,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
+const googleAuthProvider = new auth.GoogleAuthProvider();
 
-export { firebase, database as default };
+export { firebase, googleAuthProvider, database as default };

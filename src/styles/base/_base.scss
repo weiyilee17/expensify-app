@@ -3,14 +3,23 @@
 // 1.6 rem = 16 pixels
 // 2.2 rem = 22 pixels
 
+// this is for the airbnb date pickers missing arrow
+// adding this will reveal it
+// also to get rid of the padding for the input box
+
+* {
+  box-sizing: border-box;
+}
+
 html {
     font-size: 62.5%;
 }
 
-
 body {
+    color: $dark-grey;
     font-family: Helvetica, Arial, sans-serif;
     font-size: $m-size;
+    line-height: 1.6;
 }
 
 button {

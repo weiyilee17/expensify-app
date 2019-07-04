@@ -10,15 +10,18 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__COMPOSE__ || compose
 
 // Store creation
 
+const rootReducer = combineReducers({
+	expenses: expensesReducer,
+	filters: filtersReducer,
+	auth: authReducer
+});
+
 export default () => {
 	const store = createStore(
-		combineReducers({
-			expenses: expensesReducer,
-			filters: filtersReducer,
-			auth: authReducer
-		}),
-		composeEnhancers(applyMiddleware(thunk), window.devToolsExtension ? window.devToolsExtension() : f => f)
-		// window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+		rootReducer,
+		composeEnhancers(
+			applyMiddleware(thunk)
+		)
 	);
 
 	return store;

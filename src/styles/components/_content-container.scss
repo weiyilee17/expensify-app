@@ -1,5 +1,6 @@
 .content-container {
   margin: 0 auto;
   padding: 0 $m-size;
+  // 0 for top and bottom, $m-size for left and right
   max-width: 80rem;
 }
